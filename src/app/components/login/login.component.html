@@ -1,0 +1,47 @@
+<section class="login__container">
+  <div class="login__container-logo">
+    <img src="assets/img/Simbolo.png" alt="Logo atlasWare" />
+  </div>
+  <div class="login__container-form">
+    <div class="login__container-form-body">
+      <h1>
+        <img src="assets/img/logo-atlas.png" />
+        <span>AtlasWare <i>2.0</i></span>
+      </h1>
+      <p class="text-inter">Bem-vindo</p>
+      <p class="text-inter-sub">Faça seu login</p>
+      <form class="form">
+        <mat-form-field appearance="fill">
+          <mat-label>Usuario</mat-label>
+          <input matInput name="user" type="text" autocomplete="off"/>
+          <button mat-icon-button matSuffix>
+            <mat-icon>person</mat-icon>
+          </button>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Senha</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" autocomplete="off"/>
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+        <div class="form__regular-checkbox">
+          <input
+            type="checkbox"
+            id="checkbox-1-1"
+            class="regular-checkbox"
+          /><label for="checkbox-1-1"></label>
+          <div class="tag">Lembrar-me</div>
+        </div>
+
+        <button mat-button class="form__button" (click)="validateForm()">Entrar</button>
+      </form>
+    </div>
+  </div>
+</section>

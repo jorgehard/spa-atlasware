@@ -1,0 +1,9 @@
+<mat-sidenav-container autosize>
+  <mat-sidenav #sidenav fixedInViewport="true" mode="side" opened="opened">
+    <app-side-nav
+      (toggleMenu)="toggleMenu()"
+      [isExpanded]="isExpanded"
+    ></app-side-nav>
+  </mat-sidenav>
+  <mat-sidenav-content> botao </mat-sidenav-content>
+</mat-sidenav-container>
